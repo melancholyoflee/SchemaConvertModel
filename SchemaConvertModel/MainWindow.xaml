@@ -1,0 +1,19 @@
+﻿<Window x:Class="SchemaConvertModel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SchemaConvertModel"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="241,307,0,0" VerticalAlignment="Top"  Click="Button_Click" Height="65" Width="157"/>
+        <TextBox HorizontalAlignment="Left"   AcceptsReturn="True" Name="tbMultiLine"  Margin="241,107,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="288" Height="157"/>
+        <Label Content="TableSchema" HorizontalAlignment="Left" Margin="241,74,0,0" VerticalAlignment="Top"/>
+        <Label Content="TableName" HorizontalAlignment="Left" Margin="80,77,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbLog" HorizontalAlignment="Left" Margin="593,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Msg" HorizontalAlignment="Left" Margin="593,74,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbTableName" HorizontalAlignment="Left" Margin="80,107,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+    </Grid>
+</Window>

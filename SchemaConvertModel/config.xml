@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config>
+	<DataType goal="2">
+		<Item key="int" value="int" readSite="1"></Item>
+		<Item key="char" value="string" readSite="2"></Item>
+		<Item key="Date" value="DateTime" readSite="3"></Item>
+	</DataType>
+	<DataResult goal="2">
+		<Item readSite="1" razorLabel="1"></Item>
+		<Item readSite="2" razorLabel="2"></Item>
+		<Item readSite="3" razorLabel="3"></Item>
+		<Item readSite="4" razorLabel="2"></Item>
+	</DataResult>
+</config>

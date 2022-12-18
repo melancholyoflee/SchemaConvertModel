@@ -1,0 +1,19 @@
+
+@model SchemaConvertModel.TableSchema
+@{
+    string temp = "{get;set;}";
+    string lbrackets = "{";
+    string rbrackets = "}";
+    string tableName = "public class table";
+
+}
+@tableName
+@lbrackets
+
+@for (var i = 0; i < @Model.Data.Count(); i++)
+{
+   @:public @Model.Data[i]["2"] @Model.Data[i]["1"]     @temp
+}
+@rbrackets
+
+
