@@ -1,0 +1,16 @@
+
+public class table
+{
+
+   public int id     {get;set;}
+   public string name     {get;set;}
+   public string progress     {get;set;}
+   public string stop     {get;set;}
+   public string finish     {get;set;}
+   public string userid     {get;set;}
+   public string excute_time     {get;set;}
+   public string parameter     {get;set;}
+}
+
+
+
