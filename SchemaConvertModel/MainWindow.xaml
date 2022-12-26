@@ -10,10 +10,14 @@
         <Button Content="Button" HorizontalAlignment="Left" Margin="241,307,0,0" VerticalAlignment="Top"  Click="Button_Click" Height="65" Width="157"/>
         <TextBox HorizontalAlignment="Left"   AcceptsReturn="True" Name="tbMultiLine"  Margin="241,107,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="288" Height="157"/>
         <Label Content="TableSchema" HorizontalAlignment="Left" Margin="241,74,0,0" VerticalAlignment="Top"/>
-        <Label Content="TableName" HorizontalAlignment="Left" Margin="80,77,0,0" VerticalAlignment="Top"/>
+        <Label Content="TableName" HorizontalAlignment="Left" Margin="83,217,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="tbLog" HorizontalAlignment="Left" Margin="593,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label Content="Msg" HorizontalAlignment="Left" Margin="593,74,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="tbTableName" HorizontalAlignment="Left" Margin="80,107,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbTableName" HorizontalAlignment="Left" Margin="83,258,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="tbTableName_TextChanged"/>
+        <Label x:Name="SOURCE_SQL" Content="SOURCE_SQL" HorizontalAlignment="Left" Margin="103,99,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbSOURCE_SQL" HorizontalAlignment="Left" Margin="94,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="TABLE_CATALOG" HorizontalAlignment="Left" Margin="103,160,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbTABLE_CATALOG" HorizontalAlignment="Left" Margin="103,198,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
 
     </Grid>
 </Window>

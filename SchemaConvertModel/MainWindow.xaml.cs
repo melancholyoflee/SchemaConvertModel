@@ -41,11 +41,13 @@ namespace SchemaConvertModel
                 };
                 var k8sDynamicValues = new Dictionary<string, object>
                 {
-                    ["TabeName"] = tbTableName,
+                    ["tablename"] = tbTableName.Text,
+                    ["table_catalog"]=tbTABLE_CATALOG.Text,
+                    ["source_sql"]=tbSOURCE_SQL.Text
                 };
                 var engine = new Template();
                 var result = await engine.RenderAsync(templatePath, k8sValue, k8sDynamicValues);
-                using (StreamWriter writer = new StreamWriter("result.txt"))
+                using (StreamWriter writer = new StreamWriter("result.html"))
                 {
                     writer.WriteLine(result);
                 }
@@ -151,7 +153,10 @@ namespace SchemaConvertModel
             Button_ClickAsync(data);
         }
 
+        private void tbTableName_TextChanged(object sender, TextChangedEventArgs e)
+        {
 
+        }
     }
 
 

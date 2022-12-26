@@ -33,3 +33,4 @@ C:\Users\Lee\Desktop\新增資料夾 (8)\SchemaConvertModel\SchemaConvertModel\o
 C:\Users\Lee\Desktop\新增資料夾 (8)\SchemaConvertModel\SchemaConvertModel\obj\Release\net6.0-windows\ref\SchemaConvertModel.dll
 C:\Users\Lee\Desktop\新增資料夾 (8)\SchemaConvertModel\SchemaConvertModel\obj\Release\net6.0-windows\SchemaConvertModel.pdb
 C:\Users\Lee\Desktop\新增資料夾 (8)\SchemaConvertModel\SchemaConvertModel\obj\Release\net6.0-windows\SchemaConvertModel.genruntimeconfig.cache
+C:\Users\Lee\Desktop\新增資料夾 (8)\SchemaConvertModel\SchemaConvertModel\obj\Release\net6.0-windows\SchemaConvertModel.csproj.AssemblyReference.cache

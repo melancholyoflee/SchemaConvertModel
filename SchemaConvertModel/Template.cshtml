@@ -1,19 +1,47 @@
 
 @model SchemaConvertModel.TableSchema
 @{
-    string temp = "{get;set;}";
+    string tableAttr = $"[TableMisc(\"{{\"SOURCE_SQL\":\""+@ViewBag.source_sql+"\",\"TABLE_CATALOG\":\""+@ViewBag.table_catalog+"\",\"TABLE_NAME\":\"" + @ViewBag.TableName + "\",\"PKColumns\":[],\"ForeignRelations\":{{}}}}\")]";
+
+
+    string className = @$"public class {@ViewBag.tablename} : EntityBase";
+    string _calssName = $"public const string TABLENAME = \"TableCatalog." + @ViewBag.TableName + "\";";
+
+
+
     string lbrackets = "{";
     string rbrackets = "}";
-    string tableName = "public class table";
+
 
 }
-@tableName
+@tableAttr
+@className
+@_calssName
 @lbrackets
+@_calssName
 
-@for (var i = 0; i < @Model.Data.Count(); i++)
-{
-   @:public @Model.Data[i]["2"] @Model.Data[i]["1"]     @temp
+
+@{
+
+    for (var i = 0; i < @Model.Data.Count(); i++)
+    {
+        string classAttr = $"[ColumnMiscAttribute(\"{{\"TABLE_NAME\":\"" + @ViewBag.TableName + "\",\"TABLE_CATALOG\":\"TableCatalog\",\"COLUMN_NAME\":\"" +@Model.Data[i]["1"] + "\",\"IS_NULLABLE\":\"NO\",\"DATA_TYPE\":\"char\",\"CHARACTER_MAXIMUM_LENGTH\":20,\"COLUMN_DEFAULT\":null,\"DESCRIPTION\":\"\",\"IsUnique\":false,\"IndexName\":null,\"IsRequire\":true,\"IsNullable\":false,\"IsString\":true,\"IsNumber\":false,\"MaxLength\":20,\"IsPK\":false,\"IsFK\":false,\"PK_Table\":null,\"PK_Column\":null,\"CONSTRAINT_NAME\":null,\"DELETE_RULE\":null,\"IDENT_SEED\":-1.0,\"IDENT_INCR\":-1.0,\"NUMERIC_PRECISION\":0,\"NUMERIC_SCALE\":0,\"IsRequireFill\":true,\"DataType\":\"" + @Model.Data[i]["4"] + "\",\"DescriptionExtension\":null}}\")]";
+        string a = "public " + @Model.Data[i]["2"] + " " +@Model.Data[i]["1"] + " { get { return _" +@Model.Data[i]["1"] + "; } set { _" +@Model.Data[i]["1"] + " = value; SetDirty(TableName.CN_" +@Model.Data[i]["1"] + "); } }";
+        string b = "public const " + @Model.Data[i]["2"] + " CN_" +@Model.Data[i]["1"].ToString().ToUpper() + " = \"" +@Model.Data[i]["1"] + "\";";
+        string c="public const " + @Model.Data[i]["2"] + " DT_" +@Model.Data[i]["1"].ToString().ToUpper() + " = \"" + @Model.Data[i]["4"] + "\";";
+        string d = "private " + @Model.Data[i]["2"] + " _" + @Model.Data[i]["1"] + ";";
+        <div>@classAttr.ToString()</div> 
+        <div>@a</div>
+        <div>@b</div>
+        <div>@c</div>
+        <div>@d</div>
+    }
 }
+public @ViewBag.TableName
+: base()
+
+
+@lbrackets
 @rbrackets
 
 
